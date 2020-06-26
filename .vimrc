@@ -1,9 +1,12 @@
 " don't pretend to be vi
 set nocompatible
 
-" syntax at the time of diff. don't want further confusion of colors
 if &diff
+	" syntax at the time of diff. don't want further confusion of colors
 	syntax off
+
+	" ignore whitespace by default
+	set diffopt+=iwhite
 else
 	syntax on
 endif
